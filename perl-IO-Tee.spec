@@ -1,7 +1,7 @@
 %define module	IO-Tee
 %define name	perl-%{module}
 %define version 0.64
-%define release %mkrel 2
+%define release %mkrel 3
 
 Name:		%{name}
 Version:	%{version}
