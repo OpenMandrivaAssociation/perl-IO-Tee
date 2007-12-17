@@ -15,7 +15,6 @@ Source:		http://search.cpan.org/CPAN/authors/id/T/TL/TLOWERY/%{module}-%{version
 BuildRequires:	perl-devel
 %endif
 BuildArch:	noarch
-Buildroot:	%{_tmppath}/%{name}-%{version}
 
 %description
 IO::Tee objects can be used to multiplex input and output in two different
