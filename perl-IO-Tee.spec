@@ -1,21 +1,21 @@
-%define module	IO-Tee
-%define name	perl-%{module}
-%define version 0.64
-%define release %mkrel 5
+%define upstream_name	 IO-Tee
+%define upstream_version 0.64
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:		perl-%{upstream_name}
+Version:	%perl_convert_version %{upstream_version}
+Release:	%mkrel 1
+
 Summary:	Multiplex output to multiple output handles 
 License:	GPL
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{module}
-Source:		http://search.cpan.org/CPAN/authors/id/T/TL/TLOWERY/%{module}-%{version}.tar.bz2
+URL:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://search.cpan.org/CPAN/authors/id/T/TL/TLOWERY/%{upstream_name}-%{upstream_version}.tar.bz2
+
 %if %{mdkversion} < 1010
 BuildRequires:	perl-devel
 %endif
 BuildArch:	noarch
-Buildroot:	%{_tmppath}/%{name}-%{version}
+Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 IO::Tee objects can be used to multiplex input and output in two different
@@ -38,7 +38,7 @@ writes any data read to the output handles given as the remaining arguments to
 the constructor.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -59,4 +59,3 @@ rm -rf %{buildroot}
 %doc Changes README
 %{_mandir}/*/*
 %{perl_vendorlib}/IO
-
