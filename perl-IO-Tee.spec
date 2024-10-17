@@ -8,7 +8,7 @@ Release:	4
 Summary:	Multiplex output to multiple output handles 
 License:	GPL
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{upstream_name}
+URL:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	http://search.cpan.org/CPAN/authors/id/T/TL/TLOWERY/%{upstream_name}-%{upstream_version}.tar.bz2
 
 BuildRequires:	perl-devel
