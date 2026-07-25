@@ -1,15 +1,15 @@
 %define upstream_name	 IO-Tee
-%define upstream_version 0.64
+%define upstream_version 0.66
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	4
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	Multiplex output to multiple output handles 
 License:	GPL
 Group:		Development/Perl
-URL:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://search.cpan.org/CPAN/authors/id/T/TL/TLOWERY/%{upstream_name}-%{upstream_version}.tar.bz2
+URL:		https://github.com/neilb/IO-Tee
+Source0:	https://cpan.metacpan.org/authors/id/N/NE/NEILB/IO-Tee-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
