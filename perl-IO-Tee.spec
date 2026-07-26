@@ -1,15 +1,13 @@
 %define upstream_name	 IO-Tee
-%define upstream_version 0.66
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	0.66
+Release:	2
 
 Summary:	Multiplex output to multiple output handles 
 License:	GPL
 Group:		Development/Perl
 URL:		https://github.com/neilb/IO-Tee
-Source0:	https://cpan.metacpan.org/authors/id/N/NE/NEILB/IO-Tee-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/N/NE/NEILB/IO-Tee-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -36,7 +34,7 @@ writes any data read to the output handles given as the remaining arguments to
 the constructor.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -57,9 +55,7 @@ make test
 %changelog
 * Tue Jul 28 2009 Jérôme Quelin <jquelin@mandriva.org> 0.640.0-1mdv2010.0
 + Revision: 402559
-- rebuild using %%perl_convert_version
-
-* Thu Jul 31 2008 Thierry Vignaud <tv@mandriva.org> 0.64-5mdv2009.0
+- rebuild using %0.66 Thu Jul 31 2008 Thierry Vignaud <tv@mandriva.org> 0.64-5mdv2009.0
 + Revision: 257358
 - rebuild
 
