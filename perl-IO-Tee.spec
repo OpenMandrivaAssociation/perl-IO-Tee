@@ -1,13 +1,14 @@
 %define upstream_name	 IO-Tee
+%define upstream_version 0.66
 Name:		perl-%{upstream_name}
 Version:	0.66
-Release:	2
+Release:	1
 
 Summary:	Multiplex output to multiple output handles 
 License:	GPL
 Group:		Development/Perl
 URL:		https://github.com/neilb/IO-Tee
-Source0:	https://cpan.metacpan.org/authors/id/N/NE/NEILB/IO-Tee-%{version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/N/NE/NEILB/IO-Tee-0.66.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -51,29 +52,4 @@ make test
 %{_mandir}/*/*
 %{perl_vendorlib}/IO
 
-
-%changelog
-* Tue Jul 28 2009 Jérôme Quelin <jquelin@mandriva.org> 0.640.0-1mdv2010.0
-+ Revision: 402559
-- rebuild using %0.66 Thu Jul 31 2008 Thierry Vignaud <tv@mandriva.org> 0.64-5mdv2009.0
-+ Revision: 257358
-- rebuild
-
-* Thu Dec 20 2007 Olivier Blin <oblin@mandriva.com> 0.64-3mdv2008.1
-+ Revision: 135856
-- restore BuildRoot
-
-  + Thierry Vignaud <tv@mandriva.org>
-    - kill re-definition of %%buildroot on Pixel's request
-
-* Sat Sep 15 2007 Guillaume Rousse <guillomovitch@mandriva.org> 0.64-3mdv2008.0
-+ Revision: 86511
-- rebuild
-
-
-* Thu Aug 31 2006 Guillaume Rousse <guillomovitch@mandriva.org> 0.64-2mdv2007.0
-- Rebuild
-
-* Thu Oct 06 2005 Guillaume Rousse <guillomovitch@mandriva.org> 0.64-1mdk
-- first mdk release
 
